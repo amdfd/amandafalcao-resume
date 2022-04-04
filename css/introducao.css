@@ -1,0 +1,73 @@
+main {
+  background: #FAE8E9;
+}
+
+.decorador-ponto {
+  color: #FD4E54;
+}
+
+.introducao {
+  max-width: 1200px;
+  padding: 100px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 100px;
+  align-items: center;
+}
+
+.introducao h1 {
+  font-size: 4rem;
+  line-height: 1.125;
+  margin-bottom: 30px;
+}
+
+.introducao p {
+  position: relative;
+}
+
+.introducao p::after {
+  content: "";
+  display: block;
+  width: 170px;
+  height: 115px;
+  background: url(/img/dec/detalhe.svg) no-repeat center;
+  position: absolute;
+  top: 80px;
+  left: 80px;
+}
+
+.introducao p {
+  font-size: 1.5rem;
+  color: #626262;
+}
+
+@media (max-width: 1000px) {
+  .introducao h1 {
+    font-size: 3rem;
+  }
+}
+
+@media (max-width: 800px) {
+  .introducao {
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    font-size: 2rem;
+  }
+  .introducao p::after {
+    top: 90px;
+    left: 100px;
+  }
+}
+
+@media (max-width: 700px) {
+  .introducao {
+    grid-template-columns: 1fr;
+  }
+  .introducao img {
+    display: none;
+  }
+  .introducao p::after {
+    left: 200px;
+  }
+}

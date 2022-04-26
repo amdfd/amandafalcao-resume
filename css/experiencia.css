@@ -81,6 +81,19 @@
   line-height: 1.4rem;
   border-radius: 5px;
   padding: 5px 10px;
+  position: relative;
+}
+
+.empresa-habilidades::after {
+  content: "";
+  display: block;
+  width: 170px;
+  height: 115px;
+  background: url(/resume-webpage/img/dec/detalhe.svg) no-repeat center;
+  position: absolute;
+  top: 1580px;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 @media (max-width: 800px) {
@@ -100,5 +113,8 @@
     max-width: 500px;
     gap: 20px;
     padding: 10px;
+  }
+  .empresa-habilidades::after {
+    display: none;
   }
 }
